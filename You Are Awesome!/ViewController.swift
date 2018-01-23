@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
- 
+        var index = 0
+    
     //Code below executes when the app's view first loads
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,16 @@ class ViewController: UIViewController {
                         "You Are Great!",
                         "You Are Amazing!",
                         "When the Genuis Bar needs help, they call you!",
-                        "You Brighten My Day!"]
-        
-        var index = 0
+                        "You Brighten My Day!",
+                        "You Are Da Bomb!",
+                        "I can't wait to use your app!"]
         
         messageLabel.text = messages[index]
         index = index + 1
+        
+            if index == messages.count {
+                index = 0
+        }
         
         //or index += 1, which is the same thing as the above
         
