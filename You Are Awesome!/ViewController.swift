@@ -69,19 +69,19 @@ class ViewController: UIViewController {
         
         // Show a message
         
-        repeat {
-            newIndex = Int(arc4random_uniform(UInt32(messages.count)))
-        } while index == newIndex
-        
+//        repeat {
+//            newIndex = Int(arc4random_uniform(UInt32(messages.count)))
+//        } while index == newIndex
+//
         index = nonRepeatingRandom(lastNumber: index, maxValue: messages.count)
         messageLabel.text = messages[index]
         
         //Show an Image
         awesomeImage.isHidden = false
-        repeat {
-            newIndex = Int(arc4random_uniform(UInt32(numberOfImages)))
-        } while imageNumber == newIndex
-        
+//        repeat {
+//            newIndex = Int(arc4random_uniform(UInt32(numberOfImages)))
+//        } while imageNumber == newIndex
+//
         imageNumber = nonRepeatingRandom(lastNumber: imageNumber, maxValue: numberOfImages)
         awesomeImage.image = UIImage(named: "image\(imageNumber)")
         
